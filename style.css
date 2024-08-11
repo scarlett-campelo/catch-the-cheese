@@ -1,0 +1,81 @@
+@font-face {
+    font-family: Cellar;
+    src: url(/Cellar.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: url('rato32.png'), auto;
+    background-color: #0b1c4e;
+    background: radial-gradient(circle, #0b1c4e, #00031e);
+    height: 100vh;
+}
+
+#nomegame {
+    margin: 0 auto;
+    justify-content: center;
+    user-select: none;
+    display: flex;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Cellar;
+    font-size: 12px;
+}
+
+#bloco {
+    margin: 0 auto;
+    justify-content: center;
+    user-select: none;
+    display: flex;
+    height: 55px;
+    width: 155px;
+    background-color: whitesmoke;
+    border: 8px solid goldenrod;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-left: -9px;
+    margin-top: -2px;
+}
+
+#contador {
+    margin-top: 3px;
+    margin-left: 8px;
+}
+
+img {
+    height: 80px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    padding-top: 100px;
+    user-select: none;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.explode {
+    animation: explode 0.5s forwards;
+}
